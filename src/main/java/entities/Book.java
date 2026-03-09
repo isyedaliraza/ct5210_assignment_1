@@ -3,32 +3,22 @@ package entities;
 import java.util.UUID;
 
 public class Book {
-    private String id;
+    private final String id;
     private String isbn;
     private String title;
     private String author;
+    private boolean isAvailable;
 
     public Book(String isbn, String title, String author) {
         this.id = UUID.randomUUID().toString();
         this.isbn = isbn;
         this.title = title;
         this.author = author;
+        this.isAvailable = true;
     }
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
+    public String getId() {
+        return id;
     }
 
     public String getIsbn() {
@@ -39,7 +29,28 @@ public class Book {
         this.isbn = isbn;
     }
 
-    public String getId() {
-        return id;
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public void setAvailable(boolean available) {
+        isAvailable = available;
     }
 }

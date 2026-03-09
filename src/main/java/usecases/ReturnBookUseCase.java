@@ -9,7 +9,7 @@ public class ReturnBookUseCase {
         this.repository = repository;
     }
 
-    public void returnBook(String id) {
-        this.repository.returnBook(id);
+    public void returnBook(String bookId) {
+        this.repository.returnBook(bookId);
     }
 }

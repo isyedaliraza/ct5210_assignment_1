@@ -12,7 +12,7 @@ public class ListBooksUseCase {
         this.repository = repository;
     }
 
-    public ArrayList<Book> listBook(Long id) {
-        return this.repository.listBooks();
+    public ArrayList<Book> listBooks() {
+        return this.repository.listAvailableBooks();
     }
 }
